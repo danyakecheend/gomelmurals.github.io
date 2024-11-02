@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Патриотический портал Гомеля</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/pannellum/build/pannellum.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/pannellum/build/pannellum.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Карта Муралов Гомеля</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="mural-map.html">Карта муралов</a>
+        <a href="history.html">История</a>
+        <a href="potential-places.html">Перспективные места</a>
+        <a href="news.html">События</a>
+        <a href="feedback.html">Обратная связь</a>
+    </nav>
+
+ <div id="particles-js"></div>
+ <button id="toggle-music-btn" title="Музыка">&#128266;</button>
+
+ <div id="muralModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="Mural Image" class="modal-img">
+
+        <div class="modal-bio">
+            <h3>Биография</h3>
+            <p id="modal-bio"></p>
+        </div>
+
+        <p id="modal-description"></p>
+        <div id="panorama-container">
+            <div id="panorama"></div> 
+        </div>
+    </div>
+</div>
+
+    <section class="mural-intro">
+        <div class="mural-3d-marker">
+            <div class="marker-shape"></div>
+        </div>
+
+        <div class="mural-info">
+            <h2>Муралы Гомеля</h2>
+            <p>Мурал — это не просто большое изображение, нарисованное на стене, это ориганльный способ отдать дань памяти великим героям красной армии, которые во время ВОВ освободили нашу страну.
+            В Гомеле насчитывается более 10 муралов, посвященных героям Великой Отечественной войны и значимым личностям.</p>
+        </div>
+    </section>
+    <div class="container">
+ <section id="mural-map-section">
+    <h2><center>Карта муралов</h2>
+            <div id="map"></div>
+            </div>
+        </section>
+        
+<div id="route-panel" class="route-panel hidden">
+    <h3>Маршрут</h3>
+    <div id="route-options"></div>
+    <button id="close-panel" class="btn-close">Закрыть</button>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    <footer>
+        <p>© 2024 Патриотический портал г.Гомеля</p>
+    </footer>
+
+</body>
+</html>
